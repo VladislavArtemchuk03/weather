@@ -1,0 +1,180 @@
+.weather-app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: #3399cc;
+  border: 24px solid #2b81ac;
+}
+
+.forecast-board {
+  width: min(100%, 1000px);
+  padding: 12px 0 0;
+  color: #fff;
+}
+
+.forecast-title {
+  margin: 0 0 18px;
+  color: #f5fbff;
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 2px solid #fff;
+}
+
+.forecast-tile {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  transition: opacity 0.2s ease;
+}
+
+.forecast-tile:hover {
+  opacity: 0.78;
+}
+
+.forecast-tile h2 {
+  margin: 0;
+  color: #f8fbff;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 1;
+}
+
+.forecast-tile p {
+  margin: 0;
+  color: rgba(246, 250, 255, 0.74);
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.forecast-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.forecast-tile--wide {
+  grid-column: span 2;
+}
+
+.forecast-tile--full {
+  grid-column: 1 / -1;
+}
+
+.tile-lisbon {
+  background: #6baed2;
+}
+
+.tile-paris {
+  background: #68cdcf;
+}
+
+.tile-belgrade {
+  background: #ae8db3;
+}
+
+.tile-venice {
+  background: #c54747;
+}
+
+.tile-telavive {
+  background: #ec947d;
+}
+
+.tile-cair {
+  background: #f9d78c;
+}
+
+.tile-newyork {
+  background: #abd7af;
+}
+
+.tile-delhi {
+  background: #90b4ba;
+}
+
+.tile-sanfrancisco {
+  background: #cd86b0;
+}
+
+.tile-tokyo {
+  background: #74b897;
+}
+
+.tile-sydney {
+  background: #9595b8;
+}
+
+.forecast-footer {
+  margin: 28px 0 0;
+  color: rgba(250, 253, 255, 0.95);
+  font-size: 29px;
+}
+
+@media (max-width: 1080px) {
+  .forecast-board {
+    width: min(100%, 920px);
+  }
+
+  .forecast-title {
+    font-size: 28px;
+  }
+
+  .forecast-tile h2 {
+    font-size: 28px;
+  }
+
+  .forecast-tile p {
+    font-size: 26px;
+  }
+
+  .forecast-icon {
+    font-size: 38px;
+  }
+
+  .forecast-footer {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .forecast-tile--wide,
+  .forecast-tile--full {
+    grid-column: auto;
+  }
+
+  .forecast-footer {
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-app {
+    padding: 10px;
+    border-width: 8px;
+  }
+
+  .forecast-board {
+    padding-top: 8px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+  }
+}
